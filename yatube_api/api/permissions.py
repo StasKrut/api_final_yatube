@@ -1,4 +1,3 @@
-from operator import truediv
 from rest_framework import permissions
 
 
