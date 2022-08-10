@@ -27,6 +27,10 @@ class Post(models.Model):
         help_text='Группа, к которой будет относиться пост'
     )
 
+    # Сделаем сортировку в meta классе по дате
+    class Meta:
+        ordering = ['pub_date']
+
     def __str__(self):
         return self.text
 
@@ -56,6 +60,11 @@ class Follow(models.Model):
     )
 
     class Meta:
-        unique_together = ['user', 'following']
+        constraints = [
+            models.UniqueConstraint(
+                fields=['user', 'following'],
+                name='unique_user_following'
+            )
+        ]
         verbose_name = 'Подписка'
         verbose_name_plural = 'Подписки'
