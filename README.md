@@ -6,13 +6,13 @@
 
 ### Стек технологий, использованный в проекте:
 
-Python 3.7
+- Python 3.7
 
-Django 2.2.28
+- Django 2.2.28
 
-DRF
+- DRF
 
-JWT
+- JWT
 
 ### Запуск проекта в dev-режиме:
 
@@ -38,10 +38,11 @@ JWT
 
 ### Примеры запросов
 
-*GET*  http://127.0.0.1:8000/api/v1/posts/
-
+```
+GET  http://127.0.0.1:8000/api/v1/posts/
+```
 Результат:
-
+```json
 [
     {
         "id": 1,
@@ -60,23 +61,25 @@ JWT
         "group": null
     }
 ]
-
-*POST*  http://127.0.0.1:8000/api/v1/follow/
-
+```
+```
+POST  http://127.0.0.1:8000/api/v1/follow/
+```
 Данные запроса: 
-
+```json
 {
   "following": "leo"
 }
-
+```
 Результат: 
-
+```json
 {
     "id": 1,
     "following": "leo",
     "user": "newbor"
 }
+```
+Проект сделан в рамках учебного процесса по специализации Python-разработчик (backend) Яндекс.Практикум.
 
-### Автор в рамках учебного курса ЯП Python - разработчик:
-
-✅ [Stanislav Krutskikh](https://github.com/StasKrut)
+Автор в рамках учебного курса ЯП Python - разработчик:
+- :white_check_mark: [Stanislav Krutskikh](https://github.com/StasKrut)
